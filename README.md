@@ -2,6 +2,10 @@
 一行代码实现字典转模型。
 
 ##演示
+**pod 'WKModel'** 并 **#import "NSObject+WKModel.h"**
+
+--
+
 构造字典：
 
 	NSDictionary *detail1 = @{@"food":@"Rice", @"drink":@"Juice"};
