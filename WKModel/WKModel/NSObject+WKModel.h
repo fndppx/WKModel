@@ -10,7 +10,8 @@
 
 @interface NSObject (WKModel)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dict;
++ (instancetype)wk_modelFromDictionary:(NSDictionary *)dict;
++ (instancetype)wk_modelFromJSONString:(NSString *)str;
 
 - (NSDictionary *)objectProperties;
 - (NSDictionary *)arrayProperties;

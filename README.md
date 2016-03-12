@@ -2,7 +2,7 @@
 一行代码实现字典转模型。
 
 ##演示
-**pod 'WKModel'** 并 **#import "NSObject+WKModel.h"**
+**pod 'WKModel'** 并 **#import \<NSObject+WKModel.h>**
 
 --
 
@@ -17,7 +17,7 @@
     
 **一行代码转模型**：
 
-	Model *model = [[Model alloc] initWithDictionary:dict];
+	Model *model = [Model wk_modelFromDictionary:dict];
 	
 **结果**：
 
@@ -40,5 +40,11 @@
 	}
 
 ####具体详情参考demo :)
+--
+###V1.0.1
+* 修改了模型的初始化方法名。
+* 添加了一行代码实现JSON字符串转模型的方法。
+
+
 ##许可
 **WKModel** is released under [__MIT License__](https://github.com/WelkinXie/WKModel/blob/master/LICENSE).

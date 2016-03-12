@@ -11,11 +11,26 @@
 
 @implementation NSObject (WKModel)
 
-- (instancetype)initWithDictionary:(NSDictionary *)dict {
-    if (self = [self init]) {
-        [self configurePropertyWithDictionary:dict];
++ (instancetype)wk_modelFromDictionary:(NSDictionary *)dict {
+    NSObject *model = [[self alloc] init];
+    [model configurePropertyWithDictionary:dict];
+    return model;
+}
+
++ (instancetype)wk_modelFromJSONString:(NSString *)str {
+    NSObject *model = [[self alloc] init];
+    [model configurePropertyWithDictionary:[self dictionaryFromJSONString:str]];
+    return model;
+}
+
++ (NSDictionary *)dictionaryFromJSONString:(NSString *)jsonString {
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    if(error) {
+        NSLog(@"JSON有误：%@", error);
     }
-    return self;
+    return dict;
 }
 
 - (void)configurePropertyWithDictionary:(NSDictionary *)dict {

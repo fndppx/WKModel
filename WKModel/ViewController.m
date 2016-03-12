@@ -26,8 +26,7 @@
     
     NSDictionary *dict = @{@"name":@"Welkin", @"age":@22, @"phone":@"110", @"detail":detail1, @"list":arr};
     
-    Model *model = [[Model alloc] initWithDictionary:dict];
-    
+    Model *model = [Model wk_modelFromDictionary:dict];
 }
 
 - (void)didReceiveMemoryWarning {
