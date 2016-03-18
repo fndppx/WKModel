@@ -1,7 +1,7 @@
 #WKModel.podspec
 Pod::Spec.new do |s|
   s.name         = "WKModel"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "一行代码实现字典转模型。"
   s.homepage     = "https://github.com/WelkinXie/WKModel"
   s.license      = 'MIT'

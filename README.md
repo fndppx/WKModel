@@ -38,9 +38,19 @@
 	- (NSDictionary *)arrayProperties {
     	return @{@"list":[Detail class]};
 	}
+	
+###字典中key与对应的属性名字不同：
+需在模型中实现如下方法，指明key对应的属性名：
+
+	- (NSDictionary *)renamedProperties {
+	    return @{@"id":@"ID", @"pro":@"property"};
+	}
 
 ####具体详情参考demo :)
 --
+###V1.1
+* 添加更改字典中key对应的属性名的方法。
+
 ###V1.0.1
 * 修改了模型的初始化方法名。
 * 添加了一行代码实现JSON字符串转模型的方法。
