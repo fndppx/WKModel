@@ -10,6 +10,8 @@
 
 @implementation Detail
 
-
+- (NSDictionary *)renamedProperties {
+    return @{@"id":@"ID", @"pro":@"property"};
+}
 
 @end

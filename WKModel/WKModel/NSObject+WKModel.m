@@ -39,26 +39,27 @@
     NSDictionary *arrayProperties = [self dictionaryOfArrayProperties];
     
     for (NSString *key in dict) {
-        if ([properties indexOfObject:key] != NSNotFound) {
-            if (objectProperties[key]) {
-                NSObject *obj = [[objectProperties[key] alloc] init];
+        NSDictionary *realKeyDict = [self dictionaryOfRenamedProperties];
+        NSString *realKey = realKeyDict[key] ? realKeyDict[key] : key;
+        if ([properties indexOfObject:realKey] != NSNotFound) {
+            if (objectProperties[realKey]) {
+                NSObject *obj = [[objectProperties[realKey] alloc] init];
                 [obj configurePropertyWithDictionary:dict[key]];
                 
-                [self setValue:obj forKeyPath:key];
+                [self setValue:obj forKeyPath:realKey];
             }
-            else if (arrayProperties[key]) {
+            else if (arrayProperties[realKey]) {
                 NSMutableArray *arr = [NSMutableArray array];
                 for (NSDictionary *modelDict in dict[key]) {
-                    NSObject *obj = [[arrayProperties[key] alloc] init];
+                    NSObject *obj = [[arrayProperties[realKey] alloc] init];
                     [obj configurePropertyWithDictionary:modelDict];
                     
                     [arr addObject:obj];
                 }
-                
-                [self setValue:arr forKeyPath:key];
+                [self setValue:arr forKeyPath:realKey];
             }
             else {
-                [self setValue:dict[key] forKeyPath:key];
+                [self setValue:dict[key] forKeyPath:realKey];
             }
         }
     }
@@ -95,12 +96,12 @@
     return dict;
 }
 
-- (NSDictionary *)objectProperties {
-    return nil;
-}
-
-- (NSDictionary *)arrayProperties {
-    return nil;
+- (NSDictionary *)dictionaryOfRenamedProperties {
+    NSDictionary *dict;
+    if ([self respondsToSelector:@selector(renamedProperties)]) {
+        dict = [self renamedProperties];
+    }
+    return dict;
 }
 
 @end

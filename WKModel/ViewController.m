@@ -19,12 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *detail1 = @{@"food":@"Rice", @"drink":@"Juice"};
-    NSDictionary *detail2 = @{@"food":@"Noodles", @"drink":@"Tea"};
+    NSDictionary *detail1 = @{@"food":@"Rice", @"drink":@"Juice", @"id":@"987", @"pro":@"good"};
+    NSDictionary *detail2 = @{@"food":@"Noodles", @"drink":@"Tea", @"id":@"654", @"pro":@"not bad"};
 
     NSArray *arr = @[detail1, detail2];
     
-    NSDictionary *dict = @{@"name":@"Welkin", @"age":@22, @"phone":@"110", @"detail":detail1, @"list":arr};
+    NSDictionary *dict = @{@"name":@"Welkin", @"age":@22, @"phone":@"110", @"Detail":detail1, @"List":arr};
     
     Model *model = [Model wk_modelFromDictionary:dict];
 }

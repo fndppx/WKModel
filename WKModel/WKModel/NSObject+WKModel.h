@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (WKModel)
-
-+ (instancetype)wk_modelFromDictionary:(NSDictionary *)dict;
-+ (instancetype)wk_modelFromJSONString:(NSString *)str;
+@protocol WKModelDelegate <NSObject>
 
 - (NSDictionary *)objectProperties;
 - (NSDictionary *)arrayProperties;
+- (NSDictionary *)renamedProperties;
+
+@end
+
+@interface NSObject (WKModel) <WKModelDelegate>
+
++ (instancetype)wk_modelFromDictionary:(NSDictionary *)dict;
++ (instancetype)wk_modelFromJSONString:(NSString *)str;
 
 @end

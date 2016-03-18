@@ -19,4 +19,8 @@
     return @{@"list":[Detail class]};
 }
 
+- (NSDictionary *)renamedProperties {
+    return @{@"Detail":@"detail", @"List":@"list"};
+}
+
 @end
