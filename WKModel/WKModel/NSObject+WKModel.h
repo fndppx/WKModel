@@ -10,6 +10,7 @@
 
 @protocol WKModelDelegate <NSObject>
 
+@optional
 - (NSDictionary *)objectProperties;
 - (NSDictionary *)arrayProperties;
 - (NSDictionary *)renamedProperties;

@@ -24,7 +24,11 @@
 
     NSArray *arr = @[detail1, detail2];
     
-    NSDictionary *dict = @{@"name":@"Welkin", @"age":@22, @"phone":@"110", @"Detail":detail1, @"List":arr};
+    NSDictionary *dict = @{@"name":@"Welkin",
+                           @"age":@22,
+                           @"phone":@"110",
+                           @"Detail":detail1,
+                           @"List":arr};
     
     Model *model = [Model wk_modelFromDictionary:dict];
 }

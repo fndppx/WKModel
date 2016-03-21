@@ -20,61 +20,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WKModel/ViewController.m"
-            timestampString = "479486564.790173"
+            timestampString = "480255612.375854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WKModel/WKModel/NSObject+WKModel.m"
-            timestampString = "480003476.902942"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-configurePropertyWithDictionary:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NSObject(WKModel) configurePropertyWithDictionary:]"
-                  moduleName = "WKModel"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Welkin/WKModel/WKModel/WKModel/NSObject+WKModel.m"
-                  timestampString = "480003489.73854"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "1209">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NSObject(WKModel) configurePropertyWithDictionary:]"
-                  moduleName = "WKModel"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Welkin/WKModel/WKModel/WKModel/NSObject+WKModel.m"
-                  timestampString = "480003489.738748"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "1214">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

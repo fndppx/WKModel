@@ -13,7 +13,11 @@
 
     NSArray *arr = @[detail1, detail2];
     
-    NSDictionary *dict = @{@"name":@"Welkin", @"age":@22, @"phone":@"110", @"detail":detail1, @"list":arr};
+    NSDictionary *dict = @{	@"name":@"Welkin", 
+    					    @"age":@22, 
+    						@"phone":@"110", 
+    						@"detail":detail1, 
+    						@"list":arr};
     
 **一行代码转模型**：
 
@@ -25,6 +29,8 @@
 )
 
 ---
+
+##特殊情况：
 ###模型中包含模型
 需在模型中实现如下方法，指明其中包含的模型类型：
 
